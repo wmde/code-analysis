@@ -6,6 +6,11 @@ Preliminary notes for creation of presentation. Does not include the JS.
 
 
 
+Also include https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw/Wikibase.git_cleanup
+
+
+
+
 ## Wikibase phploc diff
 
 minus DM
