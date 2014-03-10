@@ -2,6 +2,8 @@ Progress between the ECR in April 2013 and now, March 2014.
 
 Preliminary notes for creation of presentation. Does not include the JS.
 
+2014-03-10. WB: eb334f65ffc691d3a2c33aa2cba28df15aa2c390
+
 
 
 ## Wikibase phploc diff
@@ -153,3 +155,46 @@ Now
 * Is its own app, should be moved out of Lib
 
 ### ChangeHandler
+
+ECR
+
+* High complexity
+* Should be split
+* Singleton
+* Doing stuff in constructor
+    * Null object pattern suggested
+
+Now
+
+* No changes
+* Does not belong in Lib, move to Repo
+
+### Wikibase\Api\EditEntity::modifyEntity
+
+NPath 17,336,096, project max
+
+Many function level issues.
+
+Definitely better now. Still not clean, though not critical (class is though).
+
+### GeoCoordinateParser
+
+ECR
+
+* Possible SRP violation
+* Suggest splitting and dispatching
+
+Done now
+
+### MapDiffer
+
+* Highest complexity
+* No changes recommended, just good tests
+
+* Complexity was reduced via method extraction
+
+### ListDiffer
+
+* Suggested using strategy for different approaches
+* Strategy implemented
+
