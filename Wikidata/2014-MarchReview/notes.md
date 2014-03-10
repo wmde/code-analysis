@@ -1,4 +1,5 @@
-Progress between the ECR in April 2013 and now, March 2014.
+Progress between the [ECR in April 2013](http://meta.wikimedia.org/wiki/Wikidata/Development/Code_Review)
+and now, March 2014.
 
 Preliminary notes for creation of presentation. Does not include the JS.
 
