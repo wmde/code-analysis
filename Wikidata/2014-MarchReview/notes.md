@@ -1,12 +1,12 @@
 Progress between the ECR in April 2013 and now, March 2014.
 
-Preliminary notes for creation of presentation.
+Preliminary notes for creation of presentation. Does not include the JS.
 
 
 
 ## Wikibase phploc diff
 
-- DM
+minus DM
 
 * NCLOC: 58k -> 95k
 * Classes: 417 -> 602
@@ -41,12 +41,115 @@ Preliminary notes for creation of presentation.
 
 * Now for "all" code
 
+* Mock API was not used, now is. Includes some non-optimal usage
+
+* High complexity in test classes, unchanged
+
+* Test quality not high - should be kept clean and refactored
+
+* Education on basic testing principles advised
+
 
 
 
 ## Frequent problems
 
-* static scoping
-* lack of lifecycle control
-* SRP violation
-* inheritance code reuse
+### static scoping
+
+Hooks, misplaced code
+
+Slowly decreasing, topic understood
+
+### lack of lifecycle control
+
+API, SpecialPage, Action, Job, ContentHandler, Maintenance etc
+
+Some new introductions, some partial cleanup.
+Estimate technical debt remained similar.
+Suggest more education and dicipline. Also DI contained in WB.git apps
+
+### SRP violation
+
+More awareness, new issues still being introduced. More education would be good.
+
+### inheritance code reuse
+
+API, SpecialPage, Entity, test cases
+
+Complexity, LSP
+
+Encouraged by lack of lifecycle control
+
+
+
+## Further issues
+
+### Singleton
+
+* Few, deprecated
+* No new ones added, some removed
+* Only a few to go
+
+### Namespace usage
+
+* PSR-0 was suggested
+* PSR-0/4 now used in all code except WB.git and part of Diff
+* Suggested migration strategy: fix as boundaries are drawn
+
+
+
+## Ball of mud
+
+* No boundaries
+* State in Lib
+
+
+
+## DI
+
+* Libraries use DI (+factories), no remaining issues there
+
+* Repo and Client factories
+    * Abused for non-construction
+    * Splits and composition did not occur
+    * Bound to from many places in codebase, no consistent effort in fixing this
+
+* DI approach from ECR implemented in WB Query
+    * Examples for API, SpecialPage and Hook in place
+
+
+
+## Serialization
+
+* ECR identified recursion problem in DVs, used suggested solution in Ask
+* Decoupling of serialization code from value objects was suggested
+* Now migrating serialization code to new format also used in Ask to reduce technical debt
+* Makes in-demand reuse possible
+
+
+
+## Action items
+
+* Implement DI -> partial
+* Refactor EditEntity (API) using DI -> fail
+* Refactor WB hooks using DI -> fail
+
+
+
+## Concrete PHP
+
+### DispatchChanges
+
+ECR
+
+* bad function level code (4 levels nest)
+* very high complexity
+* dispatched to many non-public methods -> hard to test
+
+Now
+
+* No changes
+* Clearly does to much
+* Is its own app, should be moved out of Lib
+
+### ChangeHandler
