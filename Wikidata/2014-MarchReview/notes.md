@@ -105,12 +105,6 @@ Encouraged by lack of lifecycle control
 
 
 
-## Ball of mud
-
-* No boundaries
-* State in Lib
-
-
 
 ## DI
 
