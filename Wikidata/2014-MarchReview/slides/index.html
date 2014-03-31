@@ -179,6 +179,13 @@
 
                 <section>
                     <h3>Serialization</h3>
+                    <p class="fragment">Suggested changes:<br />Decoupling from value objects</p>
+
+                    <p class="fragment">
+                        <br />Progress:
+                        <br />Implemented nicely for Ask
+                        <br /><span class="fragment">Now migrating remaining code</span>
+                    </p>
                 </section>
 
                 <section>
@@ -189,14 +196,49 @@
 
                     <section>
                         <h3>DispatchChanges</h3>
+                        <p>ECR</p>
+                        <ul>
+                            <li class="fragment">Bad function level code (4 levels of nesting)</li>
+                            <li class="fragment">Very high complexity</li>
+                            <li class="fragment">Many non-public responsibilities</li>
+                        </ul>
+
+                        <p class="fragment"><br />Now</p>
+                        <ul>
+                            <li class="fragment">No real changes</li>
+                            <li class="fragment">Clearly does way to much</li>
+                            <li class="fragment">Own app, should be moved out of Lib</li>
+                        </ul>
                     </section>
 
                     <section>
                         <h3>ChangeHandler</h3>
+
+                        <p>ECR</p>
+                        <ul>
+                            <li>High complexity</li>
+                            <li>Should be split</li>
+                            <li class="fragment">Singleton</li>
+                            <li class="fragment">Doing stuff in constructor</li>
+                        </ul>
+
+                        <p class="fragment"><br />Now</p>
+                        <ul>
+                            <li class="fragment">No real changes</li>
+                            <li class="fragment">Does not belong in Lib, move to Repo</li>
+                        </ul>
                     </section>
 
                     <section>
                         <h3>Api\EditEntity::modifyEntity</h3>
+                        <p>
+                            Guess the NPath complexity!<br />
+                            <span class="fragment">17,336,096 (way over 9000)</span>
+                        </p>
+
+                        <p class="fragment"><br />Many function level issues</p>
+
+                        <p class="fragment">Method no longer critical, class is though</p>
                     </section>
 
                 </section>
@@ -205,14 +247,26 @@
 
                     <section>
                         <h3>GeoCoordinateParser</h3>
+
+                        <p>ECR: Possible SPR violation, split suggested</p>
+
+                        <p class="fragment"><br />Status: done</p>
                     </section>
 
                     <section>
                         <h3>MapDiffer</h3>
+
+                        <p>ECR: Highest complexity, good tests recommended</p>
+
+                        <p class="fragment"><br />Status: complexity reduced via method extraction</p>
                     </section>
 
                     <section>
                         <h3>ListDiffer</h3>
+
+                        <p>ECR suggested using the strategy pattern</p>
+
+                        <p class="fragment"><br />Status: done</p>
                     </section>
 
                 </section>
