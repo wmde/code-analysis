@@ -84,18 +84,50 @@
 
                     <section>
                         <h3>Static scoping</h3>
+                        <p><a href="http://bit.ly/static-code">bit.ly/static-code</a></p>
+                        <p class="fragment">Cause: MediaWiki hooks, misplaced code</p>
+                        <p class="fragment">Trend: Slowly decreasing, topic understood</p>
                     </section>
 
                     <section>
                         <h3>Lack of lifecycle control</h3>
+
+                        <p>Legacy interfaces:<br />API, SpecialPage, Action, Job, ContentHandler, Maintenance...</p>
+
+                        <p class="fragment">
+                            Trend:<br />
+                            Some new introductions, some partial cleanup<br />
+                            Not much change in technical debt
+                        </p>
+
+                        <p class="fragment">Solution:<br />Proper DI and disciplined handling of legacy APIs</p>
                     </section>
 
                     <section>
                         <h3>SRP violations</h3>
+
+                        <p class="fragment">
+                            Trend:<br />
+                            More awareness<span class="fragment">, though perhaps not enough<br />
+                            New issues still being introduced</span>
+                        </p>
                     </section>
 
                     <section>
                         <h3>Inheritance abuse</h3>
+                        <p class="fragment">
+                            Inheritance for code reuse:<br />
+                            API, SpecialPage, Entity, test cases...
+                        </p>
+
+                        <p class="fragment">
+                            Problems:<br />
+                            Complexity, fragility, opacity, immobility<span class="fragment">, SRP, LSP</span>
+                        </p>
+
+                        <p class="fragment">
+                            Encouraged by lack of lifecycle control
+                        </p>
                     </section>
 
                 </section>
