@@ -140,16 +140,41 @@
 
                     <section>
                         <h3>Singleton</h3>
+                        <p>Initial state:<br />Few, deprecated</p>
+                        <p class="fragment">
+                            Progress:
+                            <br />No new ones added, some removed
+                            <br />Only a few to go
+                        </p>
                     </section>
 
                     <section>
                         <h3>Namespaces</h3>
+                        <p class="fragment">PSR-0 was suggested</p>
+                        <p class="fragment">We now use PSR-0 or PSR-4</p>
+                        <p class="fragment">Except in Wikibase.git and part of Diff</p>
                     </section>
 
                 </section>
 
                 <section>
                     <h3>Dependency injection</h3>
+                    <p class="fragment">Libraries use DI (+factories)</p>
+
+                    <p class="fragment">
+                        <br />
+                        Repo and Client factories
+                    </p>
+                    <ul>
+                        <li class="fragment">Abused for non-construction</li>
+                        <li class="fragment">Splits and composition did not occur</li>
+                        <li class="fragment">Excessively bound to, not being fixed consistently</li>
+                    </ul>
+
+                    <p class="fragment">
+                        <br />
+                        DI approach from ECR implemented in WB Query
+                    </p>
                 </section>
 
                 <section>
