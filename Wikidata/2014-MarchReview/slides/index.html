@@ -25,6 +25,10 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+        <style type="text/css">
+            b { color: #9999ff }
+        </style>
 	</head>
 
 	<body>
@@ -61,7 +65,7 @@
                         <p>
                             Some fun Wikibase.git stats
                         </p>
-                        <img src="img/stats.png" alt="Y U NO LOAD">
+                        <img src="img/stats.png" alt="Y U NO LOAD" />
                     </section>
 
                     <section>
@@ -72,8 +76,8 @@
                     <section>
                         <p>Classes<br/></p>
                         <p>Class count: <b class="fragment">417</b> <span class="fragment">&#8594; <b>602</b></span></p>
-                        <p class="fragment">&#8594; 13% average class NCLOC increase</p>
-                        <p class="fragment">100 NCLOC &#8594; 112 NCLOC </p>
+                        <p class="fragment">&#8594; <b>13%</b> average class NCLOC increase</p>
+                        <p class="fragment"><b>100</b> NCLOC &#8594; <b>112</b> NCLOC </p>
                     </section>
 
                     <section>
@@ -100,8 +104,8 @@
                     <section>
                         <h3>Static scoping</h3>
                         <p><a href="http://bit.ly/static-code">bit.ly/static-code</a></p>
-                        <p class="fragment">Cause: MediaWiki hooks, misplaced code</p>
-                        <p class="fragment">Trend: Slowly decreasing, topic understood</p>
+                        <p class="fragment"><br />Cause: MediaWiki hooks, misplaced code</p>
+                        <p class="fragment"><br />Trend: Slowly decreasing, topic understood</p>
                     </section>
 
                     <section>
@@ -110,18 +114,24 @@
                         <p>Legacy interfaces:<br />API, SpecialPage, Action, Job, ContentHandler, Maintenance...</p>
 
                         <p class="fragment">
+                            <br />
                             Trend:<br />
                             Some new introductions, some partial cleanup<br />
                             Not much change in technical debt
                         </p>
 
-                        <p class="fragment">Solution:<br />Proper DI and disciplined handling of legacy APIs</p>
+                        <p class="fragment">
+                            <br />
+                            Solution:<br />
+                            Proper DI and disciplined handling of legacy APIs
+                        </p>
                     </section>
 
                     <section>
                         <h3>SRP violations</h3>
 
                         <p class="fragment">
+                            <br />
                             Trend:<br />
                             More awareness<span class="fragment">, though perhaps not enough<br />
                             New issues still being introduced</span>
@@ -136,11 +146,13 @@
                         </p>
 
                         <p class="fragment">
+                            <br />
                             Problems:<br />
                             Complexity, fragility, opacity, immobility<span class="fragment">, SRP, LSP</span>
                         </p>
 
                         <p class="fragment">
+                            <br />
                             Encouraged by lack of lifecycle control
                         </p>
                     </section>
@@ -157,6 +169,7 @@
                         <h3>Singleton</h3>
                         <p>Initial state:<br />Few, deprecated</p>
                         <p class="fragment">
+                            <br />
                             Progress:
                             <br />No new ones added, some removed
                             <br />Only a few to go
@@ -294,12 +307,40 @@
                 </section>
 
                 <section>
+                    <img src="img/refactoring.gif" alt="Y U NO LOAD" />
+                </section>
+
+                <section>
+                    <h3>Other progress made</h3>
+                    <ul>
+                        <li class="fragment roll-in highlight-current-green">Extracted DataModel from Lib</li>
+                        <li class="fragment roll-in highlight-current-green">Decreased state in Lib</li>
+                        <li class="fragment roll-in highlight-current-green">Decreased Lib binding to Repo and Client</li>
+                        <li class="fragment roll-in highlight-current-green">Components</li>
+                        <li class="fragment roll-in highlight-current-green">Dependency management</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>More progress</h3>
+                    <ul>
+                        <li class="fragment roll-in highlight-current-green">More and better tests</li>
+                        <li class="fragment roll-in highlight-current-green">Better CI</li>
+                        <li class="fragment roll-in highlight-current-green">Code quality metrics and code coverage</li>
+                    </ul>
+                </section>
+
+                <section>
                     <h3>New action items</h3>
                     <ul>
                         <li class="fragment">Finish implementing DI</li>
-                        <li class="fragment">Remove Lib</li>
+                        <li class="fragment">Aggressively phase out Lib</li>
                         <li class="fragment">Create boundaries in Wikibase.git</li>
                     </ul>
+                </section>
+
+                <section>
+                    <img src="img/http-status-cats-01.jpg" alt="Y U NO LOAD" />
                 </section>
 
 			</div>
